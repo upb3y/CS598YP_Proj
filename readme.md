@@ -101,17 +101,6 @@ See `docs/roadmap.md` (soon) for milestones.
 
 ---
 
-## 👥  Contributors
-
-- **Ziang A.** — LLM pipeline lead
-- **Person B** — Embeddings & clustering
-- **Person C** — Evaluation & baselines
-- **Person D** — UX, integration, PM
-
-(Alphabetical; see [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to join.)
-
----
-
 ## 📄  License
 
 Released under the **MIT License** — see [`LICENSE`](LICENSE) for details.
