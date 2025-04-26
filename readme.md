@@ -1,111 +1,65 @@
-# Automated Folder Organizer
+# File Organization Pipeline
 
-> **Research Prototype — CS598YP Project**
->
-> Semantic, LLM‑driven re‑structuring of arbitrary local file trees.
+This project is a pipeline for organizing files based on their content and structure. It consists of four main steps:
 
----
+1. **File Structure Retrieval**: Scans a directory and generates a JSON file with the structure of the files.
+2. **Content Summarization**: Summarizes the content of the files using a generative AI model.
+3. **File Organization Mapping**: Suggests new folder paths and names for the files based on their summaries.
+4. **File Moving**: Moves and renames the files according to the generated mapping.
 
-## 📚  Project Overview
+## Installation
 
-Messy desktops and *Downloads* folders are universal.  Our organizer pipeline—driven by large‑language‑model (LLM) summarisation and embedding‑based clustering—automatically:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
 
-1. **Discovers** every (non‑hidden) file under a chosen root (`part1_1_list_files.py`).
-2. **Describes** each file’s content ✨ *(LLM prompt – WIP)*.
-3. **Designs** an ergonomic folder hierarchy *(LLM + clustering)*.
-4. **Builds** that hierarchy on disk, moving/renaming files safely (`part3_file_mover.py`).
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-This repo contains the currently implemented **Part 1‑1** and **Part 3**, plus an end‑to‑end test harness.
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
----
+4. Set up the environment variables:
+   - Create a `.env` file in the root directory.
+   - Add your Google API key for the generative AI model:
+     ```
+     GOOGLE_API_KEY=your_api_key_here
+     ```
 
-## 🗺️  Repository Layout
+## How to Run
 
-```
-.
-├── part1_1_list_files.py        # generates file_list.json (IDs + paths)
-├── part3_file_mover.py          # constructs new tree from mapping JSON
-├── test_part3_file_mover.py     # unit tests using temporary dirs
-├── docs/                        # design notes, paper draft (coming soon)
-└── README.md                    # you’re here
-```
+1. Run the main pipeline:
+   ```bash
+   python main.py <root_folder> <output_folder>
+   ```
+   - `<root_folder>`: The directory containing the files to be organized.
+   - `<output_folder>`: The directory where the organized files will be stored.
 
-> *Parts 1‑2* (LLM summarisation & hierarchy generation) live in a separate prototype notebook for now and will be merged shortly.
+2. Example:
+   ```bash
+   python main.py test_folder test_moved
+   ```
 
----
+## Project Structure
 
-## 🚀  Quick‑start
+- `main.py`: The entry point for running the entire pipeline.
+- `part1_structure_retreiver.py`: Retrieves the file structure and generates a JSON file.
+- `part1_2_content_summary.py`: Summarizes the content of the files.
+- `part2_organizer.py`: Generates a mapping for organizing the files.
+- `part3_file_mover.py`: Moves and renames the files based on the mapping.
+- `test_part3_file_mover.py`: Unit tests for the file mover script.
+- `requirements.txt`: Lists the dependencies required for the project.
 
-### 1.  Clone & set up Python
+## Notes
 
-```bash
-# clone your freshly‑pushed repo
-$ git clone git@github.com:upb3y/CS598YP_Proj.git
-$ cd CS598YP_Proj
-
-# (optional but recommended)
-$ python -m venv .venv && source .venv/bin/activate
-$ pip install -r requirements.txt   # currently none – stdlib only
-```
-
-### 2.  Generate the *file_list* JSON
-
-```bash
-# example: catalogue everything under ~/Downloads
-$ python part1_1_list_files.py ~/Downloads > file_list.json
-```
-
-### 3.  Create/obtain the *mapping* JSON
-
-*Until Parts 1‑2 are wired in, craft a tiny demo mapping manually or use the* `test/` *fixture.*
-
-### 4.  Build the new hierarchy (dry‑run first!)
-
-```bash
-# DRY‑RUN → just prints planned moves
-$ python part3_file_mover.py \
-       --file-list file_list.json \
-       --mapping   mapping.json \
-       --root      ~/Downloads \
-       --dest-root ~/Organised \
-       --dry-run
-
-# ACTUAL MOVE
-$ python part3_file_mover.py --file-list file_list.json --mapping mapping.json --root ~/Downloads --dest-root ~/Organised
-```
-
----
-
-## 🧪  Running Tests
-
-```bash
-# stdlib unittest
-$ python test_part3_file_mover.py
-
-# or pytest (nicer output)
-$ pip install pytest
-$ pytest -q
-```
-The suite spins up temporary directories, so nothing in your real file system is touched.
-
----
-
-## 🛠️  Development
-
-* Style: **black** + **ruff** (`pre-commit` config coming).
-* Branch naming: `feature/…`, `bugfix/…`, `experiment/…`.
-* Commit format: *present‑tense imperative* (e.g., “Add collision‑handling test”).
-* Pull Requests: 1 approver minimum.
-
-See `docs/roadmap.md` (soon) for milestones.
-
----
-
-## 📄  License
-
-Released under the **MIT License** — see [`LICENSE`](LICENSE) for details.
-
----
-
-*Made with ❤️ at the University of Illinois.*
+- Ensure that the Google API key is valid and has access to the generative AI model.
+- The pipeline assumes that the input files are accessible and readable.
+- Use the `--dry-run` option in `part3_file_mover.py` to preview the file moving operations without making changes.
 

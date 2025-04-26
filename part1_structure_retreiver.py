@@ -42,12 +42,15 @@ def get_file_structure_json(root_folder):
             file_list.append(file_entry)
             file_id += 1
 
-    with open("part1.json", "w", encoding="utf-8") as out:
+    with open("file_structure.json", "w", encoding="utf-8") as out:
         json.dump(file_list, out, ensure_ascii=False, indent=2)
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate file structure JSON from a folder (ignoring hidden files).")
-    parser.add_argument("folder", help="Relative or absolute path to the folder")
+    parser = argparse.ArgumentParser(
+        description="Generate file structure JSON from a folder (ignoring hidden files).")
+    parser.add_argument(
+        "folder", help="Relative or absolute path to the folder")
     args = parser.parse_args()
 
     folder_path = args.folder

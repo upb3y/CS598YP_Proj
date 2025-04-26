@@ -162,27 +162,29 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
-def main() -> None:
-    args = parse_args()
-    src_root = Path(args.root).resolve()
-    dest_root = Path(args.dest_root).resolve() if args.dest_root else src_root
+def organize_and_move_files(file_list_path: str, mapping_path: str, root: str, dest_root: str = None, dry_run: bool = False) -> None:
+    src_root = Path(root).resolve()
+    dest_root = Path(dest_root).resolve() if dest_root else src_root
 
     if not src_root.exists():
         logging.error("Source root does not exist: %s", src_root)
         sys.exit(1)
     if not dest_root.exists():
         # Allow creating if not dry‑run
-        if args.dry_run:
-            logging.info("[dry‑run] Would create destination root %s", dest_root)
+        if dry_run:
+            logging.info(
+                "[dry‑run] Would create destination root %s", dest_root)
         else:
             dest_root.mkdir(parents=True)
 
-    file_list = load_json(args.file_list)
-    mapping = load_json(args.mapping)
+    file_list = load_json(file_list_path)
+    mapping = load_json(mapping_path)
 
     id_to_path = build_lookup(file_list)
-    perform_move(src_root, dest_root, id_to_path, mapping, args.dry_run)
+    perform_move(src_root, dest_root, id_to_path, mapping, dry_run)
 
 
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    organize_and_move_files(args.file_list, args.mapping,
+                            args.root, args.dest_root, args.dry_run)

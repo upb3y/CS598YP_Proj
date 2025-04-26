@@ -7,26 +7,34 @@ from dotenv import load_dotenv
 from PIL import Image
 from pypdf import PdfReader
 
-load_dotenv()
 
-# Configure the Gemini API key via environment variable
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+def init_model():
+    load_dotenv()
+    # Configure the Gemini API key via environment variable
+    api_key = os.getenv("GOOGLE_API_KEY")
+    genai.configure(api_key=api_key)
+    # let model global in this file
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+    return api_key, model
 
-def summarize_text(content: str) -> str:
+
+def summarize_text(content: str, model) -> str:
     prompt = "Can you analyze the provided file content and generate concise, meaningful summary of its content (around 30 to 50 words): "
     response = model.generate_content(contents=[prompt, content])
     return response.text
+
 
 def extract_pdf_text(path: str) -> str:
     reader = PdfReader(path)
     return "\n".join(page.extract_text() or "" for page in reader.pages)
 
+
 def extract_docx_text(path: str) -> str:
     doc = Document(path)
     return "\n".join(paragraph.text for paragraph in doc.paragraphs)
 
-def summarize_files(input_json_path: str, output_json_path: str, root_folder: str) -> None:
+
+def summarize_files(input_json_path: str, output_json_path: str, root_folder: str, model) -> None:
     """
     Read a JSON file containing a list of files with 'id' and 'path' fields,
     summarize each file's content and write out a new JSON with summaries.
@@ -39,11 +47,13 @@ def summarize_files(input_json_path: str, output_json_path: str, root_folder: st
         file_id = file_meta.get("id")
         rel_path = file_meta.get("path")
         if not rel_path or not isinstance(rel_path, str):
-            print(f"Warning: missing or invalid path for id={file_id}, skipping.")
+            print(
+                f"Warning: missing or invalid path for id={file_id}, skipping.")
             continue
 
         # Resolve full path using root_folder if necessary
-        full_path = rel_path if os.path.isabs(rel_path) else os.path.join(root_folder, rel_path)
+        full_path = rel_path if os.path.isabs(
+            rel_path) else os.path.join(root_folder, rel_path)
         name = os.path.basename(full_path)
 
         if not os.path.exists(full_path):
@@ -64,7 +74,8 @@ def summarize_files(input_json_path: str, output_json_path: str, root_folder: st
                 except Exception:
                     content = ""
 
-        summary_text = summarize_text(content) if content else "(Could not read file content)"
+        summary_text = summarize_text(
+            content, model) if content else "(Could not read file content)"
 
         summaries.append({
             "id": file_id,
@@ -76,12 +87,12 @@ def summarize_files(input_json_path: str, output_json_path: str, root_folder: st
     with open(output_json_path, "w", encoding="utf-8") as out:
         json.dump(summaries, out, ensure_ascii=False, indent=2)
 
+
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description=
-        "Summarize files using Gemini LLM: specify input JSON and root folder, outputs to current dir"
+        description="Summarize files using Gemini LLM: specify input JSON and root folder, outputs to current dir"
     )
     parser.add_argument(
         "input_file",
@@ -93,9 +104,9 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    input_path  = args.input_file
+    input_path = args.input_file
     root_folder = args.root_folder
-    base_name   = os.path.splitext(os.path.basename(input_path))[0]
+    base_name = os.path.splitext(os.path.basename(input_path))[0]
     output_path = f"{base_name}_summaries.json"
 
     summarize_files(input_path, output_path, root_folder)
