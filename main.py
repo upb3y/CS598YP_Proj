@@ -1,4 +1,5 @@
 import os
+import time
 import argparse
 from part1_structure_retreiver import get_file_structure_json
 from part1_2_content_summary import summarize_files, init_model
@@ -30,6 +31,8 @@ def main():
     summaries_file = "file_summaries.json"
     summarize_files(structure_file, summaries_file, root_folder, model)
     print(f"File summaries saved to {summaries_file}")
+
+    time.sleep(60)
 
     # Step 3: Generate mapping for organization
     print("Step 3: Generating file organization mapping...")

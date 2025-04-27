@@ -3,6 +3,9 @@ import json
 import hashlib
 from typing import Dict, Any, Optional, Tuple, Set, List
 import zss
+import sys
+import argparse
+import os
 
 def calculate_sha256(filepath: str, buffer_size: int = 65536) -> Optional[str]:
     """Calculates the SHA-256 hash of a file."""
@@ -322,6 +325,60 @@ def evaluate_restructuring_with_hashes(
         for key in keys_to_clear: results[key] = None
 
     return results
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Compare two directory trees (with file hashes) and evaluate restructuring."
+    )
+    parser.add_argument(
+        "original_folder",
+        help="Path to the original directory tree"
+    )
+    parser.add_argument(
+        "restructured_folder",
+        help="Path to the restructured directory tree"
+    )
+    parser.add_argument(
+        "-o", "--output",
+        help="Optional path to write JSON results (defaults to stdout)",
+        metavar="RESULTS_JSON"
+    )
+    args = parser.parse_args()
+
+    # Validate input directories
+    for path in (args.original_folder, args.restructured_folder):
+        if not os.path.isdir(path):
+            print(f"Error: '{path}' is not a valid directory.", file=sys.stderr)
+            sys.exit(1)
+
+    # 1. Build the hashed directory trees
+    print(f"Scanning original tree: {args.original_folder}", file=sys.stderr)
+    original_tree = create_directory_tree_with_hashes(args.original_folder)
+    print(f"Scanning restructured tree: {args.restructured_folder}", file=sys.stderr)
+    restructured_tree = create_directory_tree_with_hashes(args.restructured_folder)
+
+    # 2. Evaluate the restructuring
+    print("Evaluating restructuring...", file=sys.stderr)
+    results = evaluate_restructuring_with_hashes(original_tree, restructured_tree)
+    if results is None:
+        print("Evaluation failed.", file=sys.stderr)
+        sys.exit(1)
+
+    # 3. Output results
+    output_data = json.dumps(results, indent=2)
+    if args.output:
+        try:
+            with open(args.output, "w") as out_f:
+                out_f.write(output_data)
+            print(f"Results written to '{args.output}'")
+        except OSError as e:
+            print(f"Error: Cannot write to '{args.output}': {e}", file=sys.stderr)
+            sys.exit(1)
+    else:
+        print(output_data)
+
+if __name__ == "__main__":
+    main()
 
 # # --- Example Usage ---
 # if __name__ == "__main__":

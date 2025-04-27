@@ -45,7 +45,7 @@ def generate_paths_with_session(file_data: List[Dict], api_key: str) -> Tuple[Di
     genai.configure(api_key=api_key)
     
     # Create a model object for chat
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.0-flash-lite')
     
     # Start a chat session
     chat = model.start_chat(history=[])

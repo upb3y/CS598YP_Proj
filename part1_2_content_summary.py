@@ -14,7 +14,7 @@ def init_model():
     api_key = os.getenv("GOOGLE_API_KEY")
     genai.configure(api_key=api_key)
     # let model global in this file
-    model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
     return api_key, model
 
 
