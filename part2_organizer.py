@@ -70,6 +70,8 @@ def generate_paths_with_session(file_data: List[Dict], api_key: str) -> Tuple[Di
     
     # Now ask for paths one by one
     for file in file_data:
+        import time
+        #time.sleep(10)
         file_id = file.get("id")
         filename = file.get("filename")
         summary = file.get("summary", "")
@@ -79,7 +81,7 @@ def generate_paths_with_session(file_data: List[Dict], api_key: str) -> Tuple[Di
         Summary: {summary}
         
         Suggest ONE appropriate folder path where this file should be stored. 
-        Reply with ONLY the folder path, no explanation.
+        Reply with ONLY the folder path, no explanation. Do not add space using underline in the folder name. 
         
         Examples of folder paths:
         - Financial/2025
