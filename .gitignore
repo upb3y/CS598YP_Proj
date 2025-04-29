@@ -1,3 +1,5 @@
 test_folder
-*.json
+test_folder_dup
+filelist.txt
+# *.json
 *.env

@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "path": "Projects/Research_and_Reports/Reputable-Sources.docx"
+  },
+  {
+    "id": 2,
+    "path": "Projects/Research_and_Reports/Q1_growth_report.pdf"
+  },
+  {
+    "id": 3,
+    "path": "Projects/Research_and_Reports/executive_summary.docx"
+  },
+  {
+    "id": 4,
+    "path": "Projects/Research_and_Reports/Citation and source description practice.docx"
+  },
+  {
+    "id": 5,
+    "path": "Projects/Urban_Agriculture/gardening_manual.pdf"
+  },
+  {
+    "id": 6,
+    "path": "Projects/Urban_Agriculture/roadmap.pdf"
+  },
+  {
+    "id": 7,
+    "path": "Projects/Urban_Agriculture/urban_plants_2024.csv"
+  },
+  {
+    "id": 8,
+    "path": "Projects/Application_Development/basil.png"
+  },
+  {
+    "id": 9,
+    "path": "Projects/Application_Development/planter_diagram.png"
+  },
+  {
+    "id": 10,
+    "path": "Projects/Application_Development/calendar_icon.jpg"
+  },
+  {
+    "id": 11,
+    "path": "Projects/Application_Development/growth_analysis.py"
+  },
+  {
+    "id": 12,
+    "path": "Projects/Application_Development/visualization.py"
+  },
+  {
+    "id": 13,
+    "path": "Projects/Application_Development/tomato.jpg"
+  },
+  {
+    "id": 14,
+    "path": "Projects/Application_Development/garden_icon.png"
+  },
+  {
+    "id": 15,
+    "path": "Projects/Application_Development/data_cleaner.py"
+  },
+  {
+    "id": 16,
+    "path": "Projects/Application_Development/config.json"
+  },
+  {
+    "id": 17,
+    "path": "Projects/Web_Activity_Logs/acquisition.log"
+  },
+  {
+    "id": 18,
+    "path": "Projects/Web_Activity_Logs/report_log.log"
+  },
+  {
+    "id": 19,
+    "path": "Projects/Web_Activity_Logs/root.log"
+  },
+  {
+    "id": 20,
+    "path": "Projects/Data_Analysis/metadata.json"
+  },
+  {
+    "id": 21,
+    "path": "Projects/Data_Analysis/soil_samples.csv"
+  },
+  {
+    "id": 22,
+    "path": "Projects/Data_Analysis/site_summary.json"
+  },
+  {
+    "id": 23,
+    "path": "Projects/Data_Analysis/sensors.json"
+  },
+  {
+    "id": 24,
+    "path": "Projects/Data_Analysis/cleaned_plants_2024.csv"
+  },
+  {
+    "id": 25,
+    "path": "Projects/Data_Analysis/report_data.csv"
+  },
+  {
+    "id": 26,
+    "path": "Projects/Data_Analysis/urban_plants_2023.csv"
+  },
+  {
+    "id": 27,
+    "path": "Documentation/archive_note.txt"
+  },
+  {
+    "id": 28,
+    "path": "Documentation/analysis_notes.txt"
+  },
+  {
+    "id": 29,
+    "path": "Documentation/Character_Sets/README_ISO_8859_1.txt"
+  }
+]

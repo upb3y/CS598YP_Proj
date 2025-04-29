@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "path": "others/archive_note.txt"
+  },
+  {
+    "id": 2,
+    "path": "others/acquisition.log"
+  },
+  {
+    "id": 3,
+    "path": "images/basil.png"
+  },
+  {
+    "id": 4,
+    "path": "images/planter_diagram.png"
+  },
+  {
+    "id": 5,
+    "path": "images/calendar_icon.jpg"
+  },
+  {
+    "id": 6,
+    "path": "images/tomato.jpg"
+  },
+  {
+    "id": 7,
+    "path": "images/garden_icon.png"
+  },
+  {
+    "id": 8,
+    "path": "code/growth_analysis.py"
+  },
+  {
+    "id": 9,
+    "path": "code/visualization.py"
+  },
+  {
+    "id": 10,
+    "path": "code/data_cleaner.py"
+  },
+  {
+    "id": 11,
+    "path": "data/metadata.json"
+  },
+  {
+    "id": 12,
+    "path": "data/soil_samples.csv"
+  },
+  {
+    "id": 13,
+    "path": "data/urban_plants_2024.csv"
+  },
+  {
+    "id": 14,
+    "path": "data/site_summary.json"
+  },
+  {
+    "id": 15,
+    "path": "data/sensors.json"
+  },
+  {
+    "id": 16,
+    "path": "data/cleaned_plants_2024.csv"
+  },
+  {
+    "id": 17,
+    "path": "data/analysis_notes.txt"
+  },
+  {
+    "id": 18,
+    "path": "data/root.log"
+  },
+  {
+    "id": 19,
+    "path": "data/report_data.csv"
+  },
+  {
+    "id": 20,
+    "path": "data/urban_plants_2023.csv"
+  },
+  {
+    "id": 21,
+    "path": "data/config.json"
+  },
+  {
+    "id": 22,
+    "path": "data/raw/README.txt"
+  },
+  {
+    "id": 23,
+    "path": "data/raw/report_log.log"
+  },
+  {
+    "id": 24,
+    "path": "agriculture/gardening_manual.pdf"
+  },
+  {
+    "id": 25,
+    "path": "agriculture/roadmap.pdf"
+  },
+  {
+    "id": 26,
+    "path": "agriculture/Q1_growth_report.pdf"
+  },
+  {
+    "id": 27,
+    "path": "documents/Reputable-Sources.docx"
+  },
+  {
+    "id": 28,
+    "path": "documents/executive_summary.docx"
+  },
+  {
+    "id": 29,
+    "path": "documents/Citation and source description practice.docx"
+  }
+]

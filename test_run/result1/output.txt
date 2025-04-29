@@ -1,0 +1,216 @@
+{
+  "ted_similarity": 0.5733333333333333,
+  "files_added": 0,
+  "files_deleted": 0,
+  "files_unchanged": 0,
+  "files_moved": 27,
+  "files_renamed": 0,
+  "files_moved_renamed": 1,
+  "dirs_added": 6,
+  "dirs_deleted": 5,
+  "dirs_unchanged": 0,
+  "dirs_moved": 0,
+  "dirs_renamed": 2,
+  "details": {
+    "deleted_files": [],
+    "added_files": [],
+    "moved_renamed_files": [
+      {
+        "hash": "119e30db8a4ea8b33723603743591a5f8229684e6236d89ef1966a72d7293607",
+        "original_path": "data/report_data.csv",
+        "new_path": "Projects/Data_Analysis/report_data.csv",
+        "change_type": "moved"
+      },
+      {
+        "hash": "dc44a1bbcc4adc4ee3b547d668b68656c5225e22532eb78eed9503de6901f097",
+        "original_path": "images/garden_icon.png",
+        "new_path": "Projects/Application_Development/garden_icon.png",
+        "change_type": "moved"
+      },
+      {
+        "hash": "3af1770fa64ea16ccfa1458de00cfed5741855c02a1979763b09f58452ff4b09",
+        "original_path": "data/urban_plants_2023.csv",
+        "new_path": "Projects/Data_Analysis/urban_plants_2023.csv",
+        "change_type": "moved"
+      },
+      {
+        "hash": "d43bf1bb93d14157a71e2a99033b58e37cdfa289adbfca24db1d7bc5ef99771b",
+        "original_path": "code/visualization.py",
+        "new_path": "Projects/Application_Development/visualization.py",
+        "change_type": "moved"
+      },
+      {
+        "hash": "afd1804003afc22caf486e8b189a795a2e380f1131e7832382a865007d86e012",
+        "original_path": "code/data_cleaner.py",
+        "new_path": "Projects/Application_Development/data_cleaner.py",
+        "change_type": "moved"
+      },
+      {
+        "hash": "70705cd0ca5284a25167a663f019425adafb719110e88f4a36a497006880fd6f",
+        "original_path": "data/urban_plants_2024.csv",
+        "new_path": "Projects/Urban_Agriculture/urban_plants_2024.csv",
+        "change_type": "moved"
+      },
+      {
+        "hash": "5d90f3e8d4c862a0ec313ba11b02626fac7aaaa98bd250b97ac7b0336b31c497",
+        "original_path": "images/tomato.jpg",
+        "new_path": "Projects/Application_Development/tomato.jpg",
+        "change_type": "moved"
+      },
+      {
+        "hash": "bb5751f068bf218d9ea0889d0da1a4c8d056daae9abe17a4f04746975f9f2563",
+        "original_path": "data/cleaned_plants_2024.csv",
+        "new_path": "Projects/Data_Analysis/cleaned_plants_2024.csv",
+        "change_type": "moved"
+      },
+      {
+        "hash": "738e88598c58fe240f4a26ff5ce61df3a7db91134216ca1cdbc7275e972a712f",
+        "original_path": "agriculture/roadmap.pdf",
+        "new_path": "Projects/Urban_Agriculture/roadmap.pdf",
+        "change_type": "moved"
+      },
+      {
+        "hash": "071b40ad974d2d0abd93761529ecab1f26b21e9585bed7ed65a9aff7680a48e9",
+        "original_path": "images/basil.png",
+        "new_path": "Projects/Application_Development/basil.png",
+        "change_type": "moved"
+      },
+      {
+        "hash": "8f72678510d255377d6fe7c8e9282b0ccd5b1c5519b6b88a915eccd8a3300769",
+        "original_path": "data/root.log",
+        "new_path": "Projects/Web_Activity_Logs/root.log",
+        "change_type": "moved"
+      },
+      {
+        "hash": "b6d4815dee313f20b681edf6c3106e925737f166f02edacdaae23ae4b3c666e4",
+        "original_path": "images/planter_diagram.png",
+        "new_path": "Projects/Application_Development/planter_diagram.png",
+        "change_type": "moved"
+      },
+      {
+        "hash": "f213ce54e8cf9e6f3380389dda5d2ae3f00a55d9e5f9262c2294ec267816dc10",
+        "original_path": "others/acquisition.log",
+        "new_path": "Projects/Web_Activity_Logs/acquisition.log",
+        "change_type": "moved"
+      },
+      {
+        "hash": "1efecdc415f74ef93229c91e0b3880d9c94f21d6cd58678e90382124bcc27d7a",
+        "original_path": "data/analysis_notes.txt",
+        "new_path": "Documentation/analysis_notes.txt",
+        "change_type": "moved"
+      },
+      {
+        "hash": "fea81cd4fa8eb42852e0137221329fb669ae4d1d6b6bf507c985cfdd48d99a5d",
+        "original_path": "documents/Reputable-Sources.docx",
+        "new_path": "Projects/Research_and_Reports/Reputable-Sources.docx",
+        "change_type": "moved"
+      },
+      {
+        "hash": "f633954039f8c5bc6d494b7f562f002661e8325114d0454cdf20b97d93a0fae5",
+        "original_path": "code/growth_analysis.py",
+        "new_path": "Projects/Application_Development/growth_analysis.py",
+        "change_type": "moved"
+      },
+      {
+        "hash": "2f41b3ef962baf9722262f74209905f2296946835727c4b2a8108723eacb7b1e",
+        "original_path": "others/archive_note.txt",
+        "new_path": "Documentation/archive_note.txt",
+        "change_type": "moved"
+      },
+      {
+        "hash": "7a13c6b4288613134187656eb6f5c2fa2a0b2674f962bf2c9ed6ebefa6cfed3b",
+        "original_path": "data/config.json",
+        "new_path": "Projects/Application_Development/config.json",
+        "change_type": "moved"
+      },
+      {
+        "hash": "4fa2cfb189fa97c8c7a9dd39cdb8ef6e72f88366d155d424c426044dc0f0cd02",
+        "original_path": "agriculture/Q1_growth_report.pdf",
+        "new_path": "Projects/Research_and_Reports/Q1_growth_report.pdf",
+        "change_type": "moved"
+      },
+      {
+        "hash": "d39c002169d36e48b3f4bee326c3f735d5ba9d0c7da94a22b60f7681ad7e7c14",
+        "original_path": "documents/executive_summary.docx",
+        "new_path": "Projects/Research_and_Reports/executive_summary.docx",
+        "change_type": "moved"
+      },
+      {
+        "hash": "7d07c18951fce5e8abbaa810a8f8cbf6478dfd9a237562bce2d625005afef2ee",
+        "original_path": "agriculture/gardening_manual.pdf",
+        "new_path": "Projects/Urban_Agriculture/gardening_manual.pdf",
+        "change_type": "moved"
+      },
+      {
+        "hash": "a1fbfbca3f86e4791d5aca52c06696652dc4fc8c9b702f42e7492c3427ba5d4d",
+        "original_path": "documents/Citation and source description practice.docx",
+        "new_path": "Projects/Research_and_Reports/Citation and source description practice.docx",
+        "change_type": "moved"
+      },
+      {
+        "hash": "0ee0376bdc73c6a73b1acca15e619e4e97a875e1f0bc23e21ec017360b31d47f",
+        "original_path": "data/raw/report_log.log",
+        "new_path": "Projects/Web_Activity_Logs/report_log.log",
+        "change_type": "moved"
+      },
+      {
+        "hash": "8fce0a79710f9ec77cc898022f64cc152193f9a1735dc599021a6135968d6014",
+        "original_path": "data/soil_samples.csv",
+        "new_path": "Projects/Data_Analysis/soil_samples.csv",
+        "change_type": "moved"
+      },
+      {
+        "hash": "3aff1954277c4fc27603346901e4848b58fe3c8bed63affe6086003dd6c2b9fe",
+        "original_path": "data/raw/README.txt",
+        "new_path": "Documentation/Character_Sets/README_ISO_8859_1.txt",
+        "change_type": "moved_renamed"
+      },
+      {
+        "hash": "4e260148852114a48bea1f9aa09db69cf05dc4fc11f0c28044836c9c528fcbbb",
+        "original_path": "data/sensors.json",
+        "new_path": "Projects/Data_Analysis/sensors.json",
+        "change_type": "moved"
+      },
+      {
+        "hash": "3fb676e2648f507e9264901fb22603bebf04aac0fc511218541d764810b216b5",
+        "original_path": "images/calendar_icon.jpg",
+        "new_path": "Projects/Application_Development/calendar_icon.jpg",
+        "change_type": "moved"
+      },
+      {
+        "hash": "800faf5a0524e2145822a72af7821e153b80ad3433631f4bd30100b24c9fa2bc",
+        "original_path": "data/metadata.json",
+        "new_path": "Projects/Data_Analysis/metadata.json",
+        "change_type": "moved"
+      }
+    ],
+    "deleted_dirs": [
+      "data",
+      "agriculture",
+      "data/raw",
+      "documents",
+      "images"
+    ],
+    "added_dirs": [
+      "Projects/Web_Activity_Logs",
+      "Projects/Research_and_Reports",
+      "Projects/Application_Development",
+      "Projects/Data_Analysis",
+      "Documentation/Character_Sets",
+      "Projects/Urban_Agriculture"
+    ],
+    "moved_renamed_dirs": [
+      {
+        "type": "renamed",
+        "original_path": "others",
+        "new_path": "Projects"
+      },
+      {
+        "type": "renamed",
+        "original_path": "code",
+        "new_path": "Documentation"
+      }
+    ],
+    "unchanged_dirs": []
+  }
+}

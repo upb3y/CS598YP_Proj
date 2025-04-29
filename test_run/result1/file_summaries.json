@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "path": "README.txt",
+    "filename": "README.txt",
+    "summary": "This document defines the graphical characters in ISO 8859-1 (Latin-1) character set from 1987. It lists the characters by their hexadecimal values and provides brief descriptions, including letters (with accents), symbols, numbers, and punctuation marks.  The text notes the limitations of descriptions.\n"
+  },
+  {
+    "id": 2,
+    "path": "roadmap.pdf",
+    "filename": "roadmap.pdf",
+    "summary": "This Urban Agriculture Project Guide, produced by the City of Vancouver, provides a manual for starting and designing urban agriculture projects on public land. It details the application process, design considerations (layout, materials, accessibility, ecological health), and provides a table of recommended edible plants. The guide aims to promote community development, food security, and sustainability through urban farming.\n"
+  },
+  {
+    "id": 3,
+    "path": "root.log",
+    "filename": "root.log",
+    "summary": "The file contains data entries, each detailing a website (e.g., www.three.com), an IP address, a timestamp, a type (TEST, REST, JSON, RAW), and a numerical value. The data reflects website activity, showcasing different types of interactions (TEST, REST, JSON, RAW)  occurring on various websites over time, with differing values.\n"
+  },
+  {
+    "id": 4,
+    "path": "config.json",
+    "filename": "config.json",
+    "summary": "This JSON file details the locations of 222 stores (likely pharmacies), primarily in the Gangbuk-gu and Dobong-gu districts of Seoul, with a few in Nowon-gu. Each store entry includes address, coordinates (latitude/longitude), name, stock availability status, and the date/time of the last stock update. Most pharmacies report \"plenty\" of stock.\n"
+  },
+  {
+    "id": 5,
+    "path": "scripts/analysis/growth_analysis.py",
+    "filename": "growth_analysis.py",
+    "summary": "This code defines a `top_k_top_p_filtering` function to filter logits in a language model, implementing both top-k and nucleus (top-p) filtering.  It removes tokens with low probabilities, controlling the model's output diversity. A usage example demonstrates how to apply temperature scaling, filtering, and multinomial sampling to generate the next token based on model output.\n"
+  },
+  {
+    "id": 6,
+    "path": "scripts/analysis/visualization.py",
+    "filename": "visualization.py",
+    "summary": "This Python text adventure game demonstrates the use of `cmd` and `textwrap` modules. It defines a game world with rooms, items, and player inventory using dictionaries. The code utilizes helper functions for displaying locations and handling player actions like movement, taking/dropping items, and looking. The demo provides basic commands to interact with the environment.\n"
+  },
+  {
+    "id": 7,
+    "path": "scripts/analysis/analysis_notes.txt",
+    "filename": "analysis_notes.txt",
+    "summary": "This file provides a comprehensive list of URLs and local file paths to sample diffraction data in various formats, including Siemens/Bruker, Philips, PANalytical, VAMAS, and others. It's a valuable resource for testing and developing software related to diffraction data analysis. Some files are hosted online, while others are in a local \"samples\" directory.\n"
+  },
+  {
+    "id": 8,
+    "path": "scripts/utils/Reputable-Sources.docx",
+    "filename": "Reputable-Sources.docx",
+    "summary": "This message advises students on identifying reputable sources for their research papers, emphasizing academic texts, articles, and professors. It warns against using magazines, newspapers, blogs, or first Google results.  It stresses the importance of discerning source selection and using library resources. The message also includes a plagiarism reminder, warning against using unauthorized websites and referencing course materials.\n"
+  },
+  {
+    "id": 9,
+    "path": "scripts/utils/data_cleaner.py",
+    "filename": "data_cleaner.py",
+    "summary": "This Python code defines a simple `Timer` class. It uses the `time` module to track elapsed time. The class provides methods to start, restart, get, and print the elapsed time.  It also includes functionality to display time in HH:mm:ss format and offers options to reset or retain the timer's internal state.\n"
+  },
+  {
+    "id": 10,
+    "path": "images/plants/basil.png",
+    "filename": "basil.png",
+    "summary": "The image displays an \"Activity Log\" interface within a Laravel application. It presents a table of GET requests with their remote addresses (127.0.0.1), response times, and timestamps.  The log entries can be viewed and deleted.  The current view shows the first 10 of 21 results, with the user able to navigate through pages.\n"
+  },
+  {
+    "id": 11,
+    "path": "images/plants/planter_diagram.png",
+    "filename": "planter_diagram.png",
+    "summary": "The image displays a \"Accounts\" management panel within a Laravel application.  It shows a list of accounts, including their type, name, email, phone, login status, and activity status, along with options to charge wallet, edit, and delete. The interface offers search functionality and a \"New Account\" button.\n"
+  },
+  {
+    "id": 12,
+    "path": "images/plants/tomato.jpg",
+    "filename": "tomato.jpg",
+    "summary": "The image showcases \"User Logger\", a tool to log user activity. It enables logging to files or log drivers and presents the logs on a FilamentPHP panel. The displayed interface shows a list of logged actions including method, remote address, response time and creation date. The command `composer require tomatophp/filament-logger` hints at installation.\n"
+  },
+  {
+    "id": 13,
+    "path": "images/icons/calendar_icon.jpg",
+    "filename": "calendar_icon.jpg",
+    "summary": "The image showcases the \"Settings Hub,\" a GUI-based application built with Laravel. It allows users to manage app settings, including Site Settings (name, logo), Social Menus (links), and Location (address, currency, language). The interface includes navigation options and search functionality.\n"
+  },
+  {
+    "id": 14,
+    "path": "images/icons/garden_icon.png",
+    "filename": "garden_icon.png",
+    "summary": "The image shows a Laravel dashboard with a modal for a wallet transaction. The user can view the current balance, select the transaction type (Credit or Debit), and enter the amount. The modal provides 'Submit' and 'Cancel' buttons.\n"
+  },
+  {
+    "id": 15,
+    "path": "reports/manuals/gardening_manual.pdf",
+    "filename": "gardening_manual.pdf",
+    "summary": "This is a vegetable planting calendar for Central Maryland, based on frost dates. It details planting times (direct sow, transplants) and harvest periods for various vegetables across the growing season (February-December). Successional planting is encouraged for sustained harvests. Includes notes on transplanting, frost dates, and provides a calendar format for easy reference.\n"
+  },
+  {
+    "id": 16,
+    "path": "reports/2025/Q1_growth_report.pdf",
+    "filename": "Q1_growth_report.pdf",
+    "summary": "This Maryland Gardener's Guide provides seasonal advice for gardening and lawn care, including frost dates, plant hardiness zones, and tips for each season. It covers essential tasks, from pruning to planting and pest control, and directs readers to resources like the University of Maryland Extension and local Master Gardeners for further assistance.\n"
+  },
+  {
+    "id": 17,
+    "path": "reports/2025/report_log.log",
+    "filename": "report_log.log",
+    "summary": "This log file from a Microsoft IIS 10.0 server contains website access data, including timestamps, HTTP methods (GET), requested URLs, user agents, and response codes.  The data reveals activity related to image and script loading, as well as requests for various pages, likely for the site \"site-logfile-explorer.com\". There are also several 301 redirects and 404 errors.\n"
+  },
+  {
+    "id": 18,
+    "path": "reports/2025/executive_summary.docx",
+    "filename": "executive_summary.docx",
+    "summary": "This annotated bibliography analyzes four sources on K-Pop. Jin and Lee examine K-Pop's industrial structure, globalization, and transcultural hybridity. Kim explores the industry's impact on gender and its role in national modernization. Kim focuses on the \"liveness\" of K-Pop performances and its cultural significance. Oh investigates how Korean municipalities leverage K-Pop to promote places and boost tourism.\n"
+  },
+  {
+    "id": 19,
+    "path": "reports/2025/report_data.csv",
+    "filename": "report_data.csv",
+    "summary": "The file contains a dataset of 150 entries describing flower characteristics. Each entry includes sepal length and width, petal length and width, and the flower's variety (Setosa, Versicolor, or Virginica). The data appears to be structured for analysis or machine learning tasks related to flower classification.\n"
+  },
+  {
+    "id": 20,
+    "path": "docs/Citation and source description practice.docx",
+    "filename": "Citation and source description practice.docx",
+    "summary": "This ANSC 205 assignment requires students to create APA-formatted references and CRAP analyses (Currency, Reliability, Authority, Purpose) for five provided online sources related to animal resources. Students must adhere to APA guidelines using information like author, publication date, and URL, while evaluating each source's credibility and intent. The assignment emphasizes proper citation and source evaluation.\n"
+  },
+  {
+    "id": 21,
+    "path": "data/processed/site_summary.json",
+    "filename": "site_summary.json",
+    "summary": "This dataset contains yield data for various barley varieties grown at different Minnesota sites (University Farm, Waseca, Morris, etc.) across 1931 and 1932. The data includes yield measurements for each variety at each location, offering insights into the performance of these barley varieties under different environmental conditions and over two years.\n"
+  },
+  {
+    "id": 22,
+    "path": "data/processed/cleaned_plants_2024.csv",
+    "filename": "cleaned_plants_2024.csv",
+    "summary": "This dataset contains measurements of sepal length, sepal width, petal length, and petal width for 150 iris flowers.  The data is categorized into three species: setosa, versicolor, and virginica.  It provides a basis for analyzing and potentially classifying iris flowers based on their physical characteristics.\n"
+  },
+  {
+    "id": 23,
+    "path": "data/raw/acquisition.log",
+    "filename": "acquisition.log",
+    "summary": "This document outlines a series of unit tests conducted on an Arduino, including compilation, upload, and execution. The tests cover examples like `floatingPin`, `inInterval`, and `slowTest`.  Results show failures in `floatingPin`,  `buildErrorTest`, `nonExistingFolder`, and `verySlowTest`, while `inInterval`, `simpleTest`, and `slowTest` passed.\n"
+  },
+  {
+    "id": 24,
+    "path": "data/raw/soil_samples.csv",
+    "filename": "soil_samples.csv",
+    "summary": "This file presents a list of US cities with their respective populations, latitude, and longitude coordinates.  It includes a total of 100 cities, ranging from New York City with a population of over 8 million to a smaller population of over 200k. The data appears to be a basic geographic and demographic snapshot of these cities.\n"
+  },
+  {
+    "id": 25,
+    "path": "data/raw/urban_plants_2024.csv",
+    "filename": "urban_plants_2024.csv",
+    "summary": "The data presents solar energy statistics across several US states. California leads with the most solar plants (289) and the highest installed capacity (4395 MW), generating 10826 GWh. Arizona and Nevada also show significant capacity, while states like New York have fewer plants and lower generation.\n"
+  },
+  {
+    "id": 26,
+    "path": "data/raw/sensors.json",
+    "filename": "sensors.json",
+    "summary": "This JSON data represents a simple blog-like structure. It contains three posts, two comments associated with the first post, and a profile with the name \"typicode\". The data showcases a basic relationship between posts, comments, and a user profile.\n"
+  },
+  {
+    "id": 27,
+    "path": "data/raw/archive/metadata.json",
+    "filename": "metadata.json",
+    "summary": "This dataset presents yield data for various barley varieties across multiple sites in Minnesota (University Farm, Waseca, Morris, etc.) over the years 1931 and 1932. The data includes the variety name, yield value, the year, and the location (site) for each observation.\n"
+  },
+  {
+    "id": 28,
+    "path": "data/raw/archive/archive_note.txt",
+    "filename": "archive_note.txt",
+    "summary": "This document is a W3C Working Draft (July 1997) defining HTML 4.0, the standard publishing language for the World Wide Web. It expands upon HTML 3.2 with improvements in multimedia, scripting, style sheets, accessibility, and internationalization, aiming for a truly global web. The specification outlines the structure, presentation, and interactive elements of HTML documents, along with notes on search engine optimization and table design.\n"
+  },
+  {
+    "id": 29,
+    "path": "data/raw/archive/urban_plants_2023.csv",
+    "filename": "urban_plants_2023.csv",
+    "summary": "This file contains a dataset of iris flower measurements.  Each row represents a flower and includes sepal length, sepal width, petal length, petal width, and the species name (Iris-setosa, Iris-versicolor, or Iris-virginica). The data provides measurements for 150 flowers, spanning three distinct species.\n"
+  }
+]

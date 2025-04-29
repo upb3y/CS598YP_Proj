@@ -19,6 +19,7 @@ Sample call:
 """
 
 import argparse
+import time
 import json
 import os
 import re
@@ -60,7 +61,7 @@ def generate_paths_with_session(file_data: List[Dict], api_key: str) -> Tuple[Di
         summary = file.get("summary", "")
         context_prompt += f"File {file_id}: {filename}\nSummary: {summary}\n\n"
     
-    context_prompt += "Please help me organize these files into logical folder structures."
+    context_prompt += "Please help me organize these files into logical folder structures. Try making the path make sense just like how people normally would organize them."
     
     # Send the context prompt
     response = chat.send_message(context_prompt)
@@ -104,6 +105,7 @@ def generate_paths_with_session(file_data: List[Dict], api_key: str) -> Tuple[Di
         """
         
         try:
+            time.sleep(5)
             response = chat.send_message(path_prompt)
             suggested_path = response.text.strip()
             

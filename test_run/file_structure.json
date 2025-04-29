@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "path": "README.txt"
+  },
+  {
+    "id": 2,
+    "path": "roadmap.pdf"
+  },
+  {
+    "id": 3,
+    "path": "root.log"
+  },
+  {
+    "id": 4,
+    "path": "config.json"
+  },
+  {
+    "id": 5,
+    "path": "scripts/analysis/growth_analysis.py"
+  },
+  {
+    "id": 6,
+    "path": "scripts/analysis/visualization.py"
+  },
+  {
+    "id": 7,
+    "path": "scripts/analysis/analysis_notes.txt"
+  },
+  {
+    "id": 8,
+    "path": "scripts/utils/Reputable-Sources.docx"
+  },
+  {
+    "id": 9,
+    "path": "scripts/utils/data_cleaner.py"
+  },
+  {
+    "id": 10,
+    "path": "images/plants/basil.png"
+  },
+  {
+    "id": 11,
+    "path": "images/plants/planter_diagram.png"
+  },
+  {
+    "id": 12,
+    "path": "images/plants/tomato.jpg"
+  },
+  {
+    "id": 13,
+    "path": "images/icons/calendar_icon.jpg"
+  },
+  {
+    "id": 14,
+    "path": "images/icons/garden_icon.png"
+  },
+  {
+    "id": 15,
+    "path": "reports/manuals/gardening_manual.pdf"
+  },
+  {
+    "id": 16,
+    "path": "reports/2025/Q1_growth_report.pdf"
+  },
+  {
+    "id": 17,
+    "path": "reports/2025/report_log.log"
+  },
+  {
+    "id": 18,
+    "path": "reports/2025/executive_summary.docx"
+  },
+  {
+    "id": 19,
+    "path": "reports/2025/report_data.csv"
+  },
+  {
+    "id": 20,
+    "path": "docs/Citation and source description practice.docx"
+  },
+  {
+    "id": 21,
+    "path": "data/processed/site_summary.json"
+  },
+  {
+    "id": 22,
+    "path": "data/processed/cleaned_plants_2024.csv"
+  },
+  {
+    "id": 23,
+    "path": "data/raw/acquisition.log"
+  },
+  {
+    "id": 24,
+    "path": "data/raw/soil_samples.csv"
+  },
+  {
+    "id": 25,
+    "path": "data/raw/urban_plants_2024.csv"
+  },
+  {
+    "id": 26,
+    "path": "data/raw/sensors.json"
+  },
+  {
+    "id": 27,
+    "path": "data/raw/archive/metadata.json"
+  },
+  {
+    "id": 28,
+    "path": "data/raw/archive/archive_note.txt"
+  },
+  {
+    "id": 29,
+    "path": "data/raw/archive/urban_plants_2023.csv"
+  }
+]
