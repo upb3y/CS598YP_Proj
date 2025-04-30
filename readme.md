@@ -1,6 +1,4 @@
-Okay, here is a draft for a `README.md` file for your GitHub repository, based on the provided code and context:
 
-```markdown
 # Automated Folder Organizer using LLM
 
 This project provides a Python-based tool that leverages Large Language Models (LLMs), specifically Google's Gemini API, to automatically organize files within a local folder structure. It analyzes file content, generates summaries, proposes a hierarchical folder structure and new filenames, and then physically reorganizes the files accordingly.
@@ -97,4 +95,3 @@ The `util.py` script includes functions (`create_directory_tree_with_hashes`, `e
 ## License
 Apache 2.0
 
-```
