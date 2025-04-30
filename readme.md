@@ -1,65 +1,100 @@
-# File Organization Pipeline
+Okay, here is a draft for a `README.md` file for your GitHub repository, based on the provided code and context:
 
-This project is a pipeline for organizing files based on their content and structure. It consists of four main steps:
+```markdown
+# Automated Folder Organizer using LLM
 
-1. **File Structure Retrieval**: Scans a directory and generates a JSON file with the structure of the files.
-2. **Content Summarization**: Summarizes the content of the files using a generative AI model.
-3. **File Organization Mapping**: Suggests new folder paths and names for the files based on their summaries.
-4. **File Moving**: Moves and renames the files according to the generated mapping.
+This project provides a Python-based tool that leverages Large Language Models (LLMs), specifically Google's Gemini API, to automatically organize files within a local folder structure. It analyzes file content, generates summaries, proposes a hierarchical folder structure and new filenames, and then physically reorganizes the files accordingly.
 
-## Installation
+## Description
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
+In an era of exponentially growing digital data, managing files effectively on local machines remains a challenge. Standard drag-and-drop methods are manual and time-consuming, while existing rule-based or simple embedding solutions often fail with inconsistent naming, diverse file types, or complex organizational needs. This tool aims to address these limitations by using an LLM to understand file content and suggest an intelligent, human-like folder organization without requiring hand-crafted rules.
 
-2. Create a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+## Features
 
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+* Recursively scans a specified directory for files.
+* Extracts content from various file types (PDF, DOCX, TXT, PNG, JPG, etc.).
+* Uses an LLM (Gemini) to generate concise summaries of file content.
+* Leverages the LLM in a contextual session to propose a logical folder hierarchy based on summaries.
+* Suggests potentially improved filenames based on content.
+* Physically moves and renames files into the proposed structure.
+* Includes a dry-run mode to preview changes before execution.
+* Handles potential filename collisions during the move process.
 
-4. Set up the environment variables:
-   - Create a `.env` file in the root directory.
-   - Add your Google API key for the generative AI model:
-     ```
-     GOOGLE_API_KEY=your_api_key_here
-     ```
+## How it Works
 
-## How to Run
+The process is divided into several sequential stages orchestrated by `main.py`:
 
-1. Run the main pipeline:
-   ```bash
-   python main.py <root_folder> <output_folder>
-   ```
-   - `<root_folder>`: The directory containing the files to be organized.
-   - `<output_folder>`: The directory where the organized files will be stored.
+1.  **Structure Retrieval (`part1_structure_retreiver.py`)**: Scans the target folder, identifies files (ignoring hidden ones), assigns unique IDs, and saves the list with relative paths to `file_structure.json`.
+2.  **Content Summarization (`part1_2_content_summary.py`)**: Reads `file_structure.json`, extracts content from each file, sends it to the Gemini API for summarization, and saves the summaries (along with IDs, paths, filenames) to `file_summaries.json`.
+3.  **Organization Mapping (`part2_organizer.py`)**: Takes `file_summaries.json`, feeds all summaries to the Gemini API in a continuous chat session for context, then iteratively prompts for a new folder path and filename for each file. The results are saved to `file_mapping.json`.
+4.  **File Moving (`part3_file_mover.py`)**: Reads `file_structure.json` and `file_mapping.json`. Based on the mapping, it moves files from their original location in the source root to the calculated new path and filename under the destination root, creating directories as needed.
 
-2. Example:
-   ```bash
-   python main.py test_folder test_moved
-   ```
+## Requirements
 
-## Project Structure
+* Python 3.8+
+* Required Python packages:
+    * `google-generativeai`
+    * `python-dotenv`
+    * `pypdf`
+    * `python-docx`
+    * `Pillow` (PIL)
+* A Google API Key for the Gemini API.
 
-- `main.py`: The entry point for running the entire pipeline.
-- `part1_structure_retreiver.py`: Retrieves the file structure and generates a JSON file.
-- `part1_2_content_summary.py`: Summarizes the content of the files.
-- `part2_organizer.py`: Generates a mapping for organizing the files.
-- `part3_file_mover.py`: Moves and renames the files based on the mapping.
-- `test_part3_file_mover.py`: Unit tests for the file mover script.
-- `requirements.txt`: Lists the dependencies required for the project.
+## Setup
 
-## Notes
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/upb3y/CS598YP_Proj.git
+    cd CS598YP_Proj
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pip install google-generativeai python-dotenv pypdf python-docx Pillow
+    ```
+3.  **Configure API Key:**
+    * Create a file named `.env` in the project's root directory.
+    * Add your Google API Key to the `.env` file:
+        ```
+        GEMINI_API_KEY='YOUR_API_KEY_HERE'
+        ```
+    * The scripts `part1_2_content_summary.py` and `part2_organizer.py` will load this key automatically. Alternatively, the key can be passed via command-line argument where supported (e.g., in `part2_organizer.py`).
 
-- Ensure that the Google API key is valid and has access to the generative AI model.
-- The pipeline assumes that the input files are accessible and readable.
-- Use the `--dry-run` option in `part3_file_mover.py` to preview the file moving operations without making changes.
+## Usage
 
+The main script `main.py` runs the entire pipeline.
+
+```bash
+python main.py <path_to_your_messy_folder> <path_to_your_organized_output_folder>
+```
+
+* `<path_to_your_messy_folder>`: The root directory containing the files you want to organize.
+* `<path_to_your_organized_output_folder>`: The directory where the organized files and folders will be created. This can be the same as the source folder for in-place organization, but using a separate output folder is recommended for safety.
+
+**Example:**
+
+```bash
+python main.py ~/Downloads ~/Documents/OrganizedDownloads
+```
+
+During execution, the script will output status messages for each step and create intermediate JSON files (`file_structure.json`, `file_summaries.json`, `file_mapping.json`) in the directory where the script is run.
+
+*(Optional)* The individual scripts (`part1_...`, `part2_...`, `part3_...`) can potentially be run separately if needed, but they generally require specific input JSON files generated by previous steps. Refer to the arguments defined within each script for details.
+
+## File Descriptions
+
+* `main.py`: Orchestrates the entire 4-stage pipeline.
+* `part1_structure_retreiver.py`: Scans folders and creates the initial file list JSON.
+* `part1_2_content_summary.py`: Extracts content and uses Gemini to create summaries JSON.
+* `part2_organizer.py`: Uses Gemini to generate the folder/filename mapping JSON based on summaries.
+* `part3_file_mover.py`: Reads the mapping and physically moves/renames files.
+* `util.py`: Contains utility functions, potentially including evaluation metrics (like tree similarity calculations using file hashes) for comparing directory structures.
+* `.env` (You create this): Stores your Google API key.
+
+## Evaluation (Optional)
+
+The `util.py` script includes functions (`create_directory_tree_with_hashes`, `evaluate_restructuring_with_hashes`) that can be used to evaluate the effectiveness of the reorganization. This typically involves comparing the structure and file placement of the `output_folder` against a manually organized or 'golden' standard directory, using metrics like Tree Edit Distance and counts of added/deleted/moved files based on content hashes. See the `main` function within `util.py` for example usage.
+
+## License
+Apache 2.0
+
+```
